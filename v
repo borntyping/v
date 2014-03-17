@@ -21,7 +21,7 @@ VIRTUAL_ENV_HOME=${VIRTUAL_ENV_HOME:-$HOME/.virtualenv}
 export VIRTUAL_ENV="$VIRTUAL_ENV_HOME/${2:-default}"
 
 # Check if the virtualenv exists, and create it if not
-if [[ ! -d $VIRTUAL_ENV || ! -d $VIRTUAL_ENV/bin/python ]]; then
+if [[ ! -d $VIRTUAL_ENV || ! -f $VIRTUAL_ENV/bin/python ]]; then
 	"$VIRTUAL_ENV_COMMAND" "$VIRTUAL_ENV"
 fi
 

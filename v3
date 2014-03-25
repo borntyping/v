@@ -5,4 +5,4 @@
 # Usage: v [name]
 #
 
-v "pyvenv-3.4" "$1"
+v "$1" "pyvenv-3.4"

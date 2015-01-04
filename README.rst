@@ -1,7 +1,9 @@
 v
 =
 
-``v`` is a tiny utility for managing python virtual environments. Calling ``v`` will open a new shell that will use a virtualenv.
+``v`` is a tiny utility for managing python virtual environments.
+
+Calling ``v`` will open a new shell that will use a virtualenv, skipping the `activate` or `workon` scripts. It will call the ``mkvirtualenv`` and ``activate`` scripts that virtualenvwrapper_ uses if they exist.
 
 Usage
 -----
@@ -16,6 +18,11 @@ start a new shell inside it. The `name` argument is the name of the virtualenv t
 The default name, python and home directory can be overridden with ``$V_DEFAULT_NAME``, ``$V_DEFAULT_PYTHON`` and ``$V_HOME``. The home directory will fall back to the value of ``$WORKON_HOME`` (used by virtualenvwrapper_) and then ``$HOME/.virtualenvs``.
 
 'Deactivating' the virtualenv is as simple as exiting the shell (`exit` or `ctrl-d`), returning you to the shell you we using before.
+
+Hooks
+-----
+
+``v`` supports a limited set of the hooks provided by virtualenvwrapper_. Hooks are looked for in the current ``$V_HOME`` directory when ``v`` is run. ``premkvirtualenv`` and ``premkvirtualenv`` are sourced immediately after a virtualenv is created (nothing is run between them). ``preactivate`` is run before exporting the virtualenv environment variables, and ``postactivate`` is sourced just before the new shell is started.
 
 Testing
 -------

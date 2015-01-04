@@ -17,6 +17,13 @@ The default name, python and home directory can be overridden with ``$V_DEFAULT_
 
 'Deactivating' the virtualenv is as simple as exiting the shell (`exit` or `ctrl-d`), returning you to the shell you we using before.
 
+Testing
+-------
+
+Running the tests requires tox_ (which installs the package) and bats_ (which checks the script can be run)::
+
+    tox
+
 Licence
 -------
 
@@ -49,3 +56,5 @@ Authors
 
 .. _virtualenv:: http://www.virtualenv.org/
 .. _virtualenvwrapper:: https://virtualenvwrapper.readthedocs.org/en/latest/
+.. _tox:: http://tox.readthedocs.org/
+.. _bats:: https://github.com/sstephenson/bats

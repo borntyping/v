@@ -7,7 +7,7 @@ if [[ $@ =~ --help || $@ =~ -h ]]; then
     echo
     echo "Activates or creates a virtualenv using virtualenvwrapper"
     echo "Uses a default name of 'default' and the default python ($(which python))"
-    exit 1
+    exit
 fi
 
 # Use 'default' as the default name

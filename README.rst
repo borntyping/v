@@ -1,25 +1,21 @@
 v
 =
 
-`v` is a tiny utility for managing python virtual environments (using
-[virtualenv](http://www.virtualenv.org/)).
+``v`` is a tiny utility for managing python virtual environments. Calling ``v`` will open a new shell that will use a virtualenv.
 
 Usage
 -----
 
-	v [virtualenv_command] [virtualenv_name]
-	v2 [virtualenv_name]
-	v3 [virtualenv_name]
+::
 
-By default, `v` will create a new virtualenv in `~/.virtualenv/default` and then
-start a new shell inside it.
+	v [name] [python]
 
-`v` itself takes two arguments - a virtualenv manager to use, and the name of
-the virtualenv to use. If no arguments are passed, `v` will use `pyvenv-3.4` and
-the  unimaginiative virtualenv name of `default`.
+By default, ``v`` will create a new virtualenv in ``~/.virtualenvs/default`` and then
+start a new shell inside it. The `name` argument is the name of the virtualenv to use, and will default to ``default``. The ``python`` argument is a python version to use, and will use the system's python by default.
 
-The environment variable `VIRTUAL_ENV_HOME` can be used to control where new
-virtualenvs are created, and is set to `~/.virtualenv` by default.
+The default name, python and home directory can be overridden with ``$V_DEFAULT_NAME``, ``$V_DEFAULT_PYTHON`` and ``$V_HOME``. The home directory will fall back to the value of ``$WORKON_HOME`` (used by virtualenvwrapper_) and then ``$HOME/.virtualenvs``.
+
+'Deactivating' the virtualenv is as simple as exiting the shell (`exit` or `ctrl-d`), returning you to the shell you we using before.
 
 Licence
 -------
@@ -50,3 +46,6 @@ Authors
 -------
 
 * [Sam Clements](https://github.com/borntyping)
+
+.. _virtualenv:: http://www.virtualenv.org/
+.. _virtualenvwrapper:: https://virtualenvwrapper.readthedocs.org/en/latest/

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
-# Creates a Python 3.4 virtual environment using pyvenv
+# Creates a Python 3 virtual environment using v
 #
 # Usage: v [name]
 #
 
-v "$1" "pyvenv-3.4"
+v "$1" "$(which python3)"

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
-# Creates a Python 2.7 virtual environment using virtualenv
+# Creates a Python 2 virtual environment using v
 #
 # Usage: v [name]
 #
 
-v "$1" "virtualenv-2.7"
+v "$1" "$(which python2.7)"

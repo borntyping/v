@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='v',
-    version='2.0.0',
+    version='2.1.0',
 
     author="Sam Clements",
     author_email="sam@borntyping.co.uk",
@@ -13,7 +13,7 @@ setuptools.setup(
     license="MIT",
 
     scripts=[
-        'src/v'
+        'v'
     ],
 
     classifiers=[

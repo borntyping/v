@@ -4,7 +4,7 @@
 #
 # Author: Sam Clements <sam@borntyping.co.uk>
 # Homepage: https://github.com/borntyping/v
-# Version: 2.0.0
+# Version: 2.1.0
 #
 
 set -e

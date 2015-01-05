@@ -13,11 +13,23 @@ Usage
 	v [name] [python]
 
 By default, ``v`` will create a new virtualenv in ``~/.virtualenvs/default`` and then
-start a new shell inside it. The `name` argument is the name of the virtualenv to use, and will default to ``default``. The ``python`` argument is a python version to use, and will use the system's python by default.
+start a new shell inside it. The `name` argument is the name of the virtualenv to use, and will default to ``default``. The ``python`` argument is a python version to use, and will use the system's python by default. It is not needed when activating a virtualenv.
 
 The default name, python and home directory can be overridden with ``$V_DEFAULT_NAME``, ``$V_DEFAULT_PYTHON`` and ``$V_HOME``. The home directory will fall back to the value of ``$WORKON_HOME`` (used by virtualenvwrapper_) and then ``$HOME/.virtualenvs``.
 
 'Deactivating' the virtualenv is as simple as exiting the shell (`exit` or `ctrl-d`), returning you to the shell you we using before.
+
+Installation
+------------
+
+Install ``v`` to ``~/.local/bin/v`` with:
+
+.. code:: bash
+
+    pip install --user v
+
+
+You may need to add ``~/.local/bin`` to your ``$PATH``.
 
 Hooks
 -----

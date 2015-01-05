@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+#
+# A tiny virtualenv manager
+#
+# Author: Sam Clements <sam@borntyping.co.uk>
+# Homepage: https://github.com/borntyping/v
+# Version: 2.0.0
+#
 
 set -e
 

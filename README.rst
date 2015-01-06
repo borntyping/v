@@ -1,9 +1,31 @@
 v
 =
 
+.. image:: http://img.shields.io/pypi/v/v.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/v
+    :alt: v on PyPI
+
+.. image:: http://img.shields.io/pypi/l/v.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/v
+    :alt: v on PyPI
+
+.. image:: http://img.shields.io/travis/borntyping/v/master.svg?style=flat-square
+    :target: https://travis-ci.org/borntyping/v
+    :alt: Travis-CI build status for v
+
+.. image:: https://img.shields.io/github/issues/borntyping/v.svg?style=flat-square
+    :target: https://github.com/borntyping/v/issues
+    :alt: GitHub issues for v
+
+|
+
 ``v`` is a tiny utility for managing python virtual environments.
 
 Calling ``v`` will open a new shell that will use a virtualenv, skipping the `activate` or `workon` scripts. It will call the ``mkvirtualenv`` and ``activate`` scripts that virtualenvwrapper_ uses if they exist.
+
+* `Source on GitHub <https://github.com/borntyping/v>`_
+* `Packages on PyPI <https://pypi.python.org/pypi/v>`_
+* `Builds on Travis CI <https://travis-ci.org/borntyping/v>`_
 
 Usage
 -----

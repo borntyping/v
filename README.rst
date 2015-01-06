@@ -95,7 +95,7 @@ THE SOFTWARE.
 Authors
 -------
 
-* [Sam Clements](https://github.com/borntyping)
+* `Sam Clements <https://github.com/borntyping>`_
 
 .. _virtualenv: http://www.virtualenv.org/
 .. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.org/en/latest/

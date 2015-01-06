@@ -21,7 +21,7 @@ v
 
 ``v`` is a tiny utility for managing python virtual environments.
 
-Calling ``v`` will open a new shell that will use a virtualenv, skipping the `activate` or `workon` scripts. It will call the ``mkvirtualenv`` and ``activate`` scripts that virtualenvwrapper_ uses if they exist.
+Calling ``v`` will open a new shell that will use a virtualenv_, skipping the `activate` or `workon` scripts. It will call the ``mkvirtualenv`` and ``activate`` scripts that virtualenvwrapper_ uses if they exist.
 
 * `Source on GitHub <https://github.com/borntyping/v>`_
 * `Packages on PyPI <https://pypi.python.org/pypi/v>`_
@@ -61,7 +61,9 @@ Hooks
 Testing
 -------
 
-Running the tests requires tox_ (which installs the package) and bats_ (which checks the script can be run)::
+Running the tests requires tox_ (which installs the package) and bats_ (which checks the script can be run):
+
+.. code:: bash
 
     tox
 
@@ -95,7 +97,7 @@ Authors
 
 * [Sam Clements](https://github.com/borntyping)
 
-.. _virtualenv:: http://www.virtualenv.org/
-.. _virtualenvwrapper:: https://virtualenvwrapper.readthedocs.org/en/latest/
-.. _tox:: http://tox.readthedocs.org/
-.. _bats:: https://github.com/sstephenson/bats
+.. _virtualenv: http://www.virtualenv.org/
+.. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.org/en/latest/
+.. _tox: http://tox.readthedocs.org/
+.. _bats: https://github.com/sstephenson/bats

@@ -13,7 +13,7 @@ function usage() {
     echo "Usage: v [name] [python]"
     echo
     echo "Activates or creates a virtualenv using virtualenvwrapper"
-    echo "[name] defaults to 'default' and [python] defaults to $(which python)"
+    echo "[name] defaults to 'default' and [python] defaults to $(which python3)"
     exit
 }
 
@@ -39,7 +39,7 @@ function main() {
     # Use the system's python by default
     # $2 -> V_DEFAULT_PYTHON -> $(which python)
     V_PYTHON=${2:-$V_DEFAULT_PYTHON}
-    V_PYTHON=${2:-$(which python)}
+    V_PYTHON=${2:-$(which python3)}
 
     # Select a directory virtualenvs will be placed in
     # This is also where hooks will be looked for

@@ -4,27 +4,27 @@
 #
 # Author: Sam Clements <sam@borntyping.co.uk>
 # Homepage: https://github.com/borntyping/v
-# Version: 2.1.0
+# Version: 3.1.0
 #
 
 set -e
 
-function usage() {
-    echo "Usage: v [name] [python]"
-    echo
-    echo "Activates or creates a virtualenv using virtualenvwrapper"
-    echo "[name] defaults to 'default' and [python] defaults to $(which python3)"
-    exit
-}
-
 # Runs a hook script if it exists in the current $V_HOME
 function run_hook() {
-    [[ -f $V_HOME/$1 ]] && source "$V_HOME/$1"
+    if [[ -f $V_HOME/$1 ]]; then
+        source "$V_HOME/$1"
+    fi
 }
 
 function main() {
     # Show the usage message if args contains --help or -h
-    [[ $@ =~ --help || $@ =~ -h ]] && usage
+    if [[ $@ =~ --help || $@ =~ -h ]]; then
+        echo "Usage: v [name] [python]"
+        echo
+        echo "Activates or creates a virtualenv using virtualenvwrapper"
+        echo "[name] defaults to 'default' and [python] defaults to $(which python3)"
+        exit
+    fi
 
     declare V_NAME
     declare V_PYTHON
@@ -59,13 +59,15 @@ function main() {
     # Export the environment that configures the virtualenv
     # This also runs the pre- and post- activate hooks
     run_hook "preactivate"
-        unset PYTHON_HOME
-        export VIRTUAL_ENV="$V_HOME/$V_NAME"
-        export PATH="$V_HOME/$V_NAME/bin:$PATH"
+    unset PYTHON_HOME
+    export VIRTUAL_ENV="$V_HOME/$V_NAME"
+    export PATH="$V_HOME/$V_NAME/bin:$PATH"
     run_hook "postactivate"
 
     # Run the postmkvirtualenv hook if we created the virtualenv
-    [[ $V_VIRTUALENV_CREATED == true ]] && run_hook "postmkvirtualenv"
+    if [[ $V_VIRTUALENV_CREATED == true ]]; then
+        run_hook "postmkvirtualenv"
+    fi
 
     # Cleanup variables only used for this script
     unset V_NAME

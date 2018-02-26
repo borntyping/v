@@ -4,7 +4,7 @@
 #
 # Author: Sam Clements <sam@borntyping.co.uk>
 # Homepage: https://github.com/borntyping/v
-# Version: 3.1.0
+# Version: 4.0.0
 #
 
 set -e
@@ -45,7 +45,7 @@ function main() {
     # This is also where hooks will be looked for
     # $V_HOME -> $WORKON_HOME -> $HOME/.virtualenv
     V_HOME=${V_HOME:=$WORKON_HOME}
-    V_HOME=${V_HOME:=$HOME/.virtualenv}
+    V_HOME=${V_HOME:=$HOME/.virtualenvs}
 
     # Create the virtualenv if it does not already exist
     if [[ ! -d "$V_HOME/$V_NAME" || ! -f "$V_HOME/$V_NAME/bin/python" ]]; then

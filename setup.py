@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='v',
-    version='3.1.0',
+    version='4.0.0',
 
     author='Sam Clements',
     author_email='sam@borntyping.co.uk',

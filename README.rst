@@ -1,4 +1,5 @@
-v=
+v
+=
 
 ``v`` is a tiny utility for managing python virtual environments. It's not currently maintained.
 
